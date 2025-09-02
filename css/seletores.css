@@ -1,0 +1,61 @@
+/* Parte 1 - Seletores CSS */
+
+/* Primeiro li (vermelho) */
+ul li:first-child {
+  color: red;
+}
+
+/* Segundo li (negrito) */
+ul li:nth-child(2) {
+  font-weight: bold;
+}
+
+/* Terceiro li (fundo amarelo) */
+ul li:nth-child(3) {
+  background-color: yellow;
+}
+
+/* Quarto li (itálico) */
+ul li:nth-child(4) {
+  font-style: italic;
+}
+
+/* Quinto li (sublinhado) */
+ul li:nth-child(5) {
+  text-decoration: underline;
+}
+
+/* Estilo extra para item selecionado no JS */
+ul li.selected {
+  background-color: lightblue;
+  border-radius: 5px;
+}
+
+/* Layout principal */
+main {
+  display: flex;
+  gap: 20px;
+}
+
+.content {
+  flex: 2;
+}
+
+aside {
+  flex: 1;
+  background: #f2f2f2;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+/* Parte 2 - Responsividade */
+@media (max-width: 768px) {
+  main {
+    flex-direction: column;
+  }
+
+  aside {
+    width: 100%;
+    order: 2; /* força o aside a ir para baixo */
+  }
+}
